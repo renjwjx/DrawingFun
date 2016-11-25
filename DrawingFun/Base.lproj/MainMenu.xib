@@ -14,6 +14,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="stretchView" destination="IU3-CJ-GPn" id="fjh-JI-4mh"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -75,7 +76,7 @@
                             </menuItem>
                             <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
                                 <connections>
-                                    <action selector="openDocument:" target="-1" id="bVn-NM-KNZ"/>
+                                    <action selector="showOpenPanel:" target="Voe-Tx-rLC" id="Rjj-9R-GpU"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Open Recent" id="tXI-mr-wws">
@@ -689,27 +690,35 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVN-yR-QTw">
-                        <rect key="frame" x="20" y="20" width="440" height="320"/>
+                        <rect key="frame" x="20" y="44" width="440" height="296"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" ambiguous="YES" id="xzu-1O-XGl">
-                            <rect key="frame" x="1" y="1" width="423" height="303"/>
+                            <rect key="frame" x="1" y="1" width="423" height="279"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IU3-CJ-GPn" customClass="StretchView">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="634" height="776"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="QBU-k0-KGI">
-                            <rect key="frame" x="1" y="304" width="423" height="15"/>
+                            <rect key="frame" x="1" y="280" width="423" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="1jE-tD-EKq">
-                            <rect key="frame" x="424" y="1" width="15" height="303"/>
+                            <rect key="frame" x="424" y="1" width="15" height="279"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n75-9d-sgN">
+                        <rect key="frame" x="18" y="18" width="444" height="19"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Jrz-dx-mQY"/>
+                        <connections>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="stretchView.opaque" id="3Ez-za-x0q"/>
+                        </connections>
+                    </slider>
                 </subviews>
             </view>
         </window>

@@ -11,6 +11,7 @@
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+
 @end
 
 @implementation AppDelegate
@@ -24,5 +25,17 @@
     // Insert code here to tear down your application
 }
 
+- (void)showOpenPanel:(id)sender
+{
+    __block NSOpenPanel *panel = [NSOpenPanel openPanel];
+    [panel setAllowedFileTypes:[NSImage imageTypes]];
+    [panel beginSheetModalForWindow:[_stretchView window] completionHandler:^(NSInteger result) {
+        if (result == NSModalResponseOK) {
+            NSImage *image = [[NSImage alloc] initWithContentsOfURL:[panel URL]];
+            [_stretchView setImage:image];
+        }
+    }];
+    
+}
 
 @end
