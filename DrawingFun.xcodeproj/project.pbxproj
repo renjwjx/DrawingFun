@@ -11,6 +11,7 @@
 		EEF83D8B1DE6E5130067C3A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF83D8A1DE6E5130067C3A9 /* main.m */; };
 		EEF83D8D1DE6E5130067C3A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEF83D8C1DE6E5130067C3A9 /* Assets.xcassets */; };
 		EEF83D901DE6E5130067C3A9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF83D8E1DE6E5130067C3A9 /* MainMenu.xib */; };
+		EEF83D991DE6E53C0067C3A9 /* StretchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF83D981DE6E53C0067C3A9 /* StretchView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		EEF83D8C1DE6E5130067C3A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEF83D8F1DE6E5130067C3A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		EEF83D911DE6E5130067C3A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEF83D971DE6E53C0067C3A9 /* StretchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StretchView.h; path = ../StretchView.h; sourceTree = "<group>"; };
+		EEF83D981DE6E53C0067C3A9 /* StretchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StretchView.m; path = ../StretchView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,8 @@
 		EEF83D851DE6E5130067C3A9 /* DrawingFun */ = {
 			isa = PBXGroup;
 			children = (
+				EEF83D971DE6E53C0067C3A9 /* StretchView.h */,
+				EEF83D981DE6E53C0067C3A9 /* StretchView.m */,
 				EEF83D861DE6E5130067C3A9 /* AppDelegate.h */,
 				EEF83D871DE6E5130067C3A9 /* AppDelegate.m */,
 				EEF83D8C1DE6E5130067C3A9 /* Assets.xcassets */,
@@ -144,6 +149,7 @@
 			files = (
 				EEF83D8B1DE6E5130067C3A9 /* main.m in Sources */,
 				EEF83D881DE6E5130067C3A9 /* AppDelegate.m in Sources */,
+				EEF83D991DE6E53C0067C3A9 /* StretchView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
